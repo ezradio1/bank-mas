@@ -1,0 +1,28 @@
+<div class="container">
+  <app-upload-sidebar
+    [(visible)]="uploadSidebar"
+    (onCancel)="uploadSidebar = false"
+  ></app-upload-sidebar>
+  <h3>Kasir</h3>
+  <div class="my-4">
+    <app-button
+      (click)="uploadSidebar = true"
+      label="Upload File"
+      icon="pi pi-plus"
+      variant="transparent"
+    ></app-button>
+  </div>
+  <app-table [columns]="columns" [data]="data">
+    <ng-template #statusTemplate let-status>
+      <div
+        [ngClass]="status ? 'active-status' : 'inactive-status'"
+        class="p-2 border-round-2xl w-5rem text-center"
+      >
+        {{ status ? "Active" : "In Active" }}
+      </div>
+    </ng-template>
+    <ng-template #createdDateTemplate let-createdDate>
+      {{ createdDate | date : "dd MMM YYYY - HH'h':mm'm':ss's'" }} WIB
+    </ng-template>
+  </app-table>
+</div>
