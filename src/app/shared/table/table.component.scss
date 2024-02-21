@@ -1,0 +1,83 @@
+:host ::ng-deep {
+  th {
+    background-color: #fff !important;
+    &:first-child {
+      border-top-left-radius: 10px;
+    }
+    &:last-child {
+      border-top-right-radius: 10px;
+    }
+    color: #626262;
+    font-size: 11px;
+  }
+
+  td {
+    font-size: 11px;
+  }
+
+  tr:last-child {
+    td {
+      &:first-child {
+        border-bottom-left-radius: 10px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+
+  .p-paginator {
+    width: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: none;
+    margin-top: 12px;
+    height: fit-content;
+    border-radius: 5px;
+
+    p-dropdown {
+      position: absolute;
+      left: 0;
+    }
+    .p-dropdown {
+      left: 0;
+      height: 24px;
+      .p-dropdown-label {
+        font-size: 12px;
+        padding: 4px 8px !important;
+      }
+    }
+
+    .p-paginator-prev {
+      margin-left: 80px !important;
+    }
+    .p-paginator-prev,
+    .p-paginator-next {
+      min-width: auto !important;
+      border-radius: 0 !important;
+    }
+
+    .p-paginator-first,
+    .p-paginator-last {
+      display: none;
+    }
+
+    .p-paginator-element {
+      font-size: 12px !important;
+      background-color: #fff;
+      margin: 0;
+      height: fit-content;
+    }
+
+    .p-paginator-pages .p-paginator-page {
+      min-width: 24px !important;
+      border-radius: 0 !important;
+    }
+
+    .p-highlight {
+      color: #eb5255 !important;
+      background-color: transparent !important;
+      font-weight: 700;
+    }
+  }
+}
