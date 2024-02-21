@@ -1,1 +1,32 @@
 @import "primeicons/primeicons.css";
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import "./sizing.scss";
+@import "./text-color.scss";
+
+body,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 !important;
+  font-family: "Lexend Deca";
+}
+
+*,
+input[type="text"] {
+  font-family: "Lexend Deca";
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+::placeholder {
+  font-family: "Lexend Deca";
+  font-weight: 300;
+  font-size: 14px;
+}
+
+

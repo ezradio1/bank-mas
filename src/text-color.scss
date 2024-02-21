@@ -1,0 +1,7 @@
+$colors: ("3A4B55", "2E2E2E", "6D6D6D", "A1A1A1");
+
+@each $color in $colors {
+  .text-#{$color} {
+    color: unquote("#" + $color);
+  }
+}

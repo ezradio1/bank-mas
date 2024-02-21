@@ -1,0 +1,7 @@
+$widths: (100, 150, 200, 300, 400, 500);
+
+@each $width in $widths {
+  .min-w-#{$width} {
+    min-width: #{$width}px;
+  }
+}
