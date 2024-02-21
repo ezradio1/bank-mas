@@ -1,0 +1,40 @@
+::ng-deep .p-button {
+  border-radius: 28px;
+  min-width: 100px;
+  font-family: "Lexend Deca";
+  font-size: 14px;
+}
+
+.btn-orange {
+  ::ng-deep .p-button {
+    background-image: linear-gradient(#eb5255, #ef9746);
+    border: none;
+
+    &:focus {
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ef9746, 0 1px 2px 0 black;
+    }
+  }
+}
+
+.btn-transparent {
+  ::ng-deep .p-button {
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+    color: #2e2e2e;
+
+    &:focus {
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #D8D8D8, 0 1px 2px 0 black;
+    }
+  }
+}
+
+.btn-dark {
+  ::ng-deep .p-button {
+    background-color: #000000;
+    border: 1px solid #000000;
+
+    &:focus {
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #000000, 0 1px 2px 0 black;
+    }
+  }
+}
