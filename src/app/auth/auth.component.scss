@@ -1,0 +1,16 @@
+.right-side-bg {
+  background-color: #f3f5f9;
+}
+
+.glass-background {
+  height: 46vh;
+  background-color: rgba(243, 245, 249, 0.5);
+  backdrop-filter: blur(30px);
+}
+
+:host ::ng-deep {
+  .p-password,
+  input.p-password-input {
+    width: 100%;
+  }
+}

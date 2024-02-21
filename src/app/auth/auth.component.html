@@ -1,0 +1,65 @@
+<div class="grid h-screen w-screen m-0">
+  <div class="col-5 flex justify-content-center align-items-center relative">
+    <div class="w-7">
+      <img src="assets/img/web-cashier-logo.png" />
+      <p class="text-3A4B55 font-light py-2">
+        Silahkan masukan Cashier ID dan sandi.
+      </p>
+
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="handleLogin()"
+        class="mt-4 flex flex-column gap-4"
+      >
+        <div class="flex flex-column gap-2">
+          <label for="email">Cashier ID</label>
+          <input
+            formControlName="email"
+            placeholder="Input Cashier ID mu"
+            pInputText
+          />
+        </div>
+        <div class="flex flex-column gap-2">
+          <label for="password">Sandi</label>
+          <p-password
+            formControlName="password"
+            placeholder="Input Sandi"
+            [toggleMask]="true"
+            [feedback]="false"
+          ></p-password>
+        </div>
+
+        <div
+          *ngIf="isError"
+          class="bg-red-100 text-2E2E2E text-xs p-3 border-round-lg flex align-items-center gap-2"
+        >
+          <img src="assets/icons/error.svg" alt="Error Icon" />
+          Email atau kata sandi yang kamu masukan salah
+        </div>
+
+        <div class="flex justify-content-end mt-4">
+          <app-button
+            label="Masuk"
+            [loading]="loading"
+            [disabled]="!loginForm.valid"
+            type="submit"
+            variant="orange"
+          ></app-button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="flex justify-content-between absolute bottom-0 p-4 w-full text-xs text-2E2E2E"
+    >
+      <p>© Bank Mas 2022</p>
+      <p>Web Cashier v.1.0</p>
+    </div>
+  </div>
+
+  <div
+    class="col right-side-bg flex justify-content-center align-items-center relative"
+  >
+    <img src="assets/img/web-cashier-icon.png" />
+    <div class="absolute bottom-0 w-full glass-background"></div>
+  </div>
+</div>
